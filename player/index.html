@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebMusicPlayer</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<audio id="audio" src="music/锦鲤抄.mp3">
+		<source src="music/锦鲤抄.mp3" singer="银临" title="锦鲤抄">
+		<source src="music/房间.mp3" singer="刘瑞琦" title="房间">
+		<source src="music/岁月神偷.mp3" singer="金玟崎" title="岁月神偷">
+		<source src="music/空に光る.mp3" singer="Key Sounds Label" title="空に光る">
+		<source src="music/Stuttering.mp3" singer="Fefe Dobson" title="Stuttering">
+		<source src="music/君だったら.mp3" singer="HAPPY BIRTHDAY" title="君だったら">
+	</audio>
+
+	<div class="playbox">
+		<div class="playcontainer">
+			<!-- 歌曲列表 -->
+			<div class="main-list" id="main-list">
+				<div class="list-head" id="list-head">
+					<span class="head-left">正在播放<span id="song-count">0</span></span>
+					<span class="head-right">
+						<a href="#" class="clear-all">清空全部</a>
+					</span>
+				</div>
+
+				<div class="list-body" id="list-body">
+					<table class="list-content">
+						<tbody id="list-content">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!-- 歌曲图片 -->
+			<div class="song-information">
+				<div class="song-pic" id="song-pic">
+					<img src="img/qq.png">
+				</div>
+				<div class="progress-bar">
+					<div class="slider">
+						<div class="buffer"></div>
+						<div class="processor"></div>
+						<div class="controller"></div>
+					</div>
+					<div class="c-song-name" id="c-song-name"></div>
+					<span class="song-time" id="song-time"></span>
+				</div>
+				<div id="lyrics">
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- 歌曲控制区 -->
+		<div class="play-control">
+			<div class="song-control">
+				<div class="last-song">
+					<a href="#" class="btn-last" id="btn-last"></a>
+				</div>
+				<div class="stop">
+					<a href="#" class="btn-stop" id="btn-stop"></a>
+				</div>
+				<div class="next-song">
+					<a href="#" class="btn-next" id="btn-next"></a>
+				</div>
+			</div>
+			<div class="sound-control">
+				<a href="#" class="sound-logo" id="sound-logo"></a>
+				<input id="soundrange" min="0" max="1" step="0.1" type="range">
+			</div>
+			<div class="pattern-control">
+				<a href="#" id="order"></a>
+				<a href="#" id="random"></a>
+				<a href="#" id="listloop"></a>
+				<a href="#" id="onesloop"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #CACACA;
+}
+a:hover{
+	color: #fff;
+}
+
+
+body{
+	background: #272C30;
+	color: #CACACA;
+	height: 600px;
+	overflow: hidden;
+}
+
+.playbox{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 100px;
+	height: 100%;
+	margin-bottom: 100px;
+}
+.playcontainer{
+	overflow: hidden;
+}
+.main-list{
+	width: 55%;
+	float: left;
+	height: 300px;
+}
+
+.head-left{
+	display: inline-block;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#song-count{
+	margin-left: 10px;
+}
+
+.head-right{
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+}
+
+table{
+	border-collapse:collapse;
+  	border-spacing: 0px;
+  	width: 100%;
+}
+tr{
+	height: 40px;
+	width: 100%;
+	position: relative;
+}
+
+td{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: transparent;
+    border-color: rgba(255,255,255,0.05)
+}
+.song-name {
+	width: 40%;
+	height: 40px;
+}
+
+.delete-song{
+	font-size: 18px;
+}
+
+.song-information{
+	/*height: 300px;*/
+	width: 45%;
+	float: right;
+	text-align: center;
+}
+
+.song-pic {
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+}
+
+
+img{
+	width: 200px;
+	height:200px;
+}
+
+.progress-bar{
+	position: absolute;
+	right: 150px;
+	top: 340px;
+}
+
+.slider {
+	width: 400px;
+	height: 7px;
+	background-color:#b9b4b4;
+	position: relative;
+	margin-top: 20px;
+}
+
+.buffer {
+    height: 7px;
+    background-color:#f3ecec;
+	position: absolute;
+	left: 0;
+}
+.processor {
+	height: 7px;
+
+	background-color:pink;
+	position: absolute;
+	left: 0;
+}
+.controller {
+	width: 15px;
+	height: 15px;
+	border-radius: 20px;
+	background-color: #fff;
+	position: absolute;
+	top: -5px;
+	left: 0px;
+}
+
+.c-song-name{
+	margin-top: -38px;
+	text-align: center;
+}
+
+.song-time{
+	margin-top: -20px;
+	float: right;
+}
+
+#lyrics{
+	height: 30px;          /*不加高度的话没有歌词时下面会移动，要不就写到外面一层写成浮动吧，但我觉得对其上面这个图片好看些*/
+	width: 100%;
+	margin-top: 100px;
+	font-family: Microsoft Yahei;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.play-control{
+	position: relative;
+	top: 40px;
+}
+
+.song-control{
+	width: 280px;
+	height: 90px;
+}
+
+.btn-last{
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-image: url(../img/icon/last-normal.png);
+	background-size: 60px;
+}
+
+.btn-last:hover, .btn-last:active{
+	background-image: url(../img/icon/last-ac.png);
+}
+
+.btn-stop{
+	margin-left: 100px;
+	display: inline-block;
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+	background-image: url(../img/icon/stop-normal.png);
+	background-size: 90px;
+}
+
+.btn-stop:hover, .btn-stop:active{
+	background-image: url(../img/icon/stop-ac.png);
+	background-position: 0px 1px;
+}
+
+.btn-next{
+	position: absolute;
+	left: 190px;
+	top: 15px;
+	margin-left: 30px;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-image: url(../img/icon/next-normal.png);
+	background-size: 60px;
+}
+
+.btn-next:hover, .btn-next-active{
+	background-image: url(../img/icon/next-ac.png);
+}
+
+.sound-control{
+	position: relative;
+	top: -50px;
+	left: 350px;
+}
+
+.sound-logo{
+	position: absolute;
+	left: -25px;
+	top: 3px;
+	display: inline-block;
+	width: 20px;
+	height: 24px;
+	background-image: url(../img/icon/sound.png);
+	background-size: 20px;
+	background-position: 0px 1px;
+}
+
+.sound-logo:hover{
+	background-position: 0px 24px;
+}
+input[type="range"] {
+    margin-top: 2px;
+    background-color: #CACACA;
+    border-radius: 15px;
+    width: 100px;
+    -webkit-appearance: none;
+    height:5px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    top: -10px;
+    height: 15px;
+    width: 15px;
+    background: #CACACA;
+    border-radius: 100%;
+}
+
+.pattern-control{
+	width: 100px;
+	position: relative;
+	left: 550px;
+	top: -70px;
+}
+
+#order,#random,#listloop,#onesloop{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+#order{
+	background-image: url(../img/icon/order.png);
+	background-size: 20px;
+	background-position: 0px 0px;
+}
+
+#random{
+	background-image: url(../img/icon/random.png);
+	background-size: 21px;
+	background-position: 0px 0px;
+}
+
+#listloop{
+	background-image: url(../img/icon/listloop.png);
+	background-size: 21px;
+	background-position: 0px 0px;
+}
+
+#onesloop{
+	background-image: url(../img/icon/oneloop.png);
+	background-size: 21px;
+	background-position: 0px 0px;
+}

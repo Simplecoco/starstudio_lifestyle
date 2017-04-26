@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+<form class="register" autocomplete="off">
+    <ul>
+        <li>
+            <label for="id">User name</label>
+            <div class="inputBox">
+                <input type="text" name="id" id="id" autofocus>
+                <span class="tip"></span>
+                <i class="valid-tip">√</i>
+            </div>
+        </li>
+        <li>
+            <label for="password">Password</label>
+            <div class="inputBox">
+                <input type="password" name="password" id="password">
+                <span class="tip"></span>
+                <i class="valid-tip">√</i>
+            </div>
+        </li>
+        <li>
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="inputBox">
+                <input type="password" name="confirmPassword" id="confirmPassword">
+                <span class="tip"></span>
+                <i class="valid-tip">√</i>
+            </div>
+        </li>
+        <li>
+            <label for="telephone">Mobile</label>
+            <div class="inputBox">
+                <input type="text" name="telephone" id="telephone">
+                <span class="tip"></span>
+                <i class="valid-tip">√</i>
+            </div>
+        </li>
+        <!--<li>-->
+        <!--<label for="studentId">Your Id</label>-->
+        <!--<div class="inputBox">-->
+        <!--<input type="text" name="studentId" id="studentId">-->
+        <!--<span class="tip"></span>-->
+        <!--<i class="valid-tip">√</i>-->
+        <!--</div>-->
+        <!--</li>-->
+        <li>
+            <label for="email">e-mail</label>
+            <div class="inputBox">
+                <input type="text" name="email" id="email" maxlength="25">
+                <ul class="tip" id="email-tip"></ul>
+                <i class="valid-tip">√</i>
+            </div>
+        </li>
+    </ul>
+    <button type="button" id="signIn" class="validBt">Sign in</button>
+</form>
+<script type="text/javascript" src="js/register.js" charset="utf-8"></script>
+</body>
+</html>

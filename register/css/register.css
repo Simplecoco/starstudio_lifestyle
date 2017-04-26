@@ -1,0 +1,199 @@
+*{
+    font-family: Microsoft JhengHei ;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url("picture/baymax.jpg") 0/cover fixed;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding-top: 8em;*/
+}
+
+.register{
+    position: relative;
+    /*height: 65%;*/
+    width: 670px;
+    margin: 0 auto;
+    padding: 1em;
+    box-shadow: 3px 3px 6px 0 #171717;
+    border: 16px solid transparent;
+    background: linear-gradient(white,white),repeating-linear-gradient(-45deg,rgba(255,0,0,0.8) 0,rgba(255,61,29,0.8) 5%,transparent 0,rgba(255,255,255,0.8) 10%,rgba(18,206,229,0.8) 0,transparent 15%,white 0,white 20%);
+    background-size: cover;
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    border-radius: 20px;
+    box-sizing: border-box;
+    z-index: 3;
+    color: gainsboro;
+    /*top: 50%;*/
+    text-align: center;
+    /*transform: ;*/
+    transition: transform 0.5s;
+}
+
+.register::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(20px);
+    background: url("picture/baymax.jpg") 0/cover fixed;
+    z-index: -2;
+    margin: -10px;
+}
+
+.register ul{
+    padding: 1em 0;
+    margin: 0;
+}
+
+.register ul li{
+    position: relative;
+    list-style: none;
+    margin-bottom: 1.6em;
+    white-space: nowrap;
+    color: rgba(238,44,44);
+}
+
+.register ul li label{
+    text-align: right;
+    display: inline-block;
+    min-width: 150px;
+    margin-right: 4em;
+}
+
+.register ul li input{
+    outline:none;
+    border-color:transparent transparent gainsboro transparent;
+    background:inherit;
+    border-width:0 0 2px 0;
+    font-size: 16px;
+    transition: border-color 0.4s;
+    padding: 0 2em .5em;
+    box-sizing: border-box;
+    color: inherit;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.register ul li input:focus{
+    border-color:transparent transparent dodgerblue transparent;
+}
+
+.register ul li .inputBox{
+    position: relative;
+    width: 23em;
+    display: inline-block;
+    text-align: center;
+}
+
+.register ul li .tip{
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 100%;
+    margin: 0.2em 0 0;
+    font-family:YouYuan;
+    font-size: 12px;
+    white-space: normal;
+    word-break: break-all;
+    z-index: 5;
+    overflow: visible;
+    background: rgba(238,44,44,0.6);
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    line-height: 1em;
+    transform: rotateX(-90deg);
+    transition:width 0.2s, transform 0.2s,border-radius 0.2s 0.2s;
+    transform-origin: top;
+}
+
+.register ul li .tip li{
+    margin: 0;
+    line-height: 2em;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.register ul li .tip li:hover {
+    background:rgba(10,110,255,0.8);
+}
+
+.register ul li .valid-tip{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    width: 1.5em;
+    line-height: 1.5em;
+    font-family:YouYuan;
+    font-size: 12px;
+    color: gainsboro;
+    transform:scale(0);
+    font-weight: bold;
+    padding: 0;
+    z-index: 5;
+    margin-right: 1em;
+    background:rgba(118,238,0,0.5);
+    box-shadow: 0 0 5px 0 #3b3b3b;
+    border-radius: 50%;
+    transition:transform 0.2s 0.2s;
+    text-align: center;
+    font-style: normal;
+}
+
+.register .invalidBt{
+    background: rgba(255,255,255,.2);
+    width: 100%;
+    display: inline-block;
+    padding: .5em 2em;
+    border: none;
+    transition: background 0.4s;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: gray;
+    outline:none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.register .validBt{
+    background: rgba(255,255,255,.2);
+    width: 100%;
+    display: inline-block;
+    padding: .5em 2em;
+    border: none;
+    box-shadow: 1px 1px 5px 0 black;
+    transition: background 0.4s;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:none;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.register .validBt:focus{
+    background:gainsboro;
+}
+
+.register .validBt:hover{
+    background: gainsboro;
+}

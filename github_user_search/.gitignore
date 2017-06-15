@@ -1,0 +1,7 @@
+#Xcode 已在gitignore_global里设置过
+*/.DS_Store
+.DS_Store
+.DS_Store?
+
+#依赖
+node_modules/

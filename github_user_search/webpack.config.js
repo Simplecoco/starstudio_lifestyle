@@ -9,7 +9,11 @@ var BUILD_PATH=path.resolve(ROOT_PATH,'build');
 
 module.exports= {
     entry: {
-        app: path.resolve(APP_PATH, 'index.jsx')
+        app: path.resolve(APP_PATH, 'index.jsx'),
+        vendor:[
+            "react",
+            "react-dom"
+        ]
     },
     output: {
         path: BUILD_PATH,
@@ -31,10 +35,8 @@ module.exports= {
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: APP_PATH,
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                // include: APP_PATH
+                exclude:path.resolve(ROOT_PATH,"node_modules")
             },
             {
                 test:/\.scss$/,
@@ -53,7 +55,8 @@ module.exports= {
         new HtmlwebpackPlugin({
             title: 'My first react app'
         }),
-        new ExtractTextPlugin("style.css")
+        new ExtractTextPlugin("style.css"),
+        new webpack.optimize.CommonsChunkPlugin({name:"vendor",filename:"vendor.bundle.js"})
     ],
 
     resolve: {

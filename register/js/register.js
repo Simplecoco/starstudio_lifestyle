@@ -23,7 +23,7 @@
             regexp: /^(?!^_+$)(?!^\d+$)([\u4E00-\u9FA5\uF900-\uFA2D\w_]){1,18}$/,  //不能纯数字，不能纯下划线
             tip: "用户名只能为数字，字母，下划线的组合，还不能有空格哦。"
         },
-        
+
         password: {
             __proto__: rule,
             id: "password",
@@ -237,7 +237,6 @@
                     if(xhr.readyState == 4){
                         if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                             var message = JSON.parse(xhr.response);
-                            console.log(message);
                             if (message.errorCode == "0") {
                                 registerForm.style.transform="rotateX(90deg)";
                                 setTimeout(function(){registerForm.innerHTML="注册成功";registerForm.style.transform="rotateX(0)";},500);

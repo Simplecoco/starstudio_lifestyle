@@ -18,3 +18,6 @@
 ```
  var test1=new DropDown("test",[1,2,3],400,40,"ssss");
 ```
+
+## DEMO PREVIEW ONLINE
+- [下拉框组件](https://simplecoco.github.io/demo/drop-down_list_widget/index.html)

@@ -208,7 +208,7 @@
                     }
                 }
             };
-            xhr.open("post","http://www.jinsong.online/ci_api/index.php/admin/id_only",true);
+            xhr.open("post","http://jshello.top/ci_api/index.php/admin/id_only",true);
             var form=new FormData();
             form.append(that.id,dom.value);
             xhr.send(form);
@@ -255,7 +255,7 @@
                         }
                     }
                 };
-                xhr.open("post","http://www.jinsong.online/ci_api/index.php/admin/registration",true);
+                xhr.open("post","http://jshello.top/ci_api/index.php/admin/registration",true);
                 delete rules.bingoValueGroup["confirmPassword"];
                 var form=new FormData(rules.bingoValueGroup);
                 for(var j=0;j<Object.keys(rules.bingoValueGroup).length;j++){

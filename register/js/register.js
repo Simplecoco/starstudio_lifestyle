@@ -257,7 +257,7 @@
                 };
                 xhr.open("post","http://jshello.top/ci_api/index.php/admin/registration",true);
                 delete rules.bingoValueGroup["confirmPassword"];
-                var form=new FormData(rules.bingoValueGroup);
+                var form=new FormData();
                 for(var j=0;j<Object.keys(rules.bingoValueGroup).length;j++){
                     form.append(Object.keys(rules.bingoValueGroup)[j],rules.bingoValueGroup[Object.keys(rules.bingoValueGroup)[j]]);
                 }

@@ -1,3 +1,11 @@
+@font-face {font-family: "iconfont";
+    src: url('../icon/iconfont.eot?t=1500291782555'); /* IE9*/
+    src: url('../icon/iconfont.eot?t=1500291782555#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../icon/iconfont.woff?t=1500291782555') format('woff'), /* chrome, firefox */
+    url('../icon/iconfont.ttf?t=1500291782555') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../icon/iconfont.svg?t=1500291782555#iconfont') format('svg'); /* iOS 4.1- */
+}
+
 *{
     font-family: Microsoft JhengHei ;
 }
@@ -141,10 +149,9 @@ body{
     display: block;
     right: 0;
     top: 0;
-    width: 1.5em;
-    line-height: 1.5em;
-    font-family:YouYuan;
-    font-size: 12px;
+    width: 1.4em;
+    line-height: 1.4em;
+    font-size: 14px;
     color: gainsboro;
     transform:scale(0);
     font-weight: bold;
@@ -158,6 +165,16 @@ body{
     text-align: center;
     font-style: normal;
 }
+
+.icon-gou {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gou:before { content: "\e61d"; }
 
 .register .invalidBt{
     background: rgba(255,255,255,.2);

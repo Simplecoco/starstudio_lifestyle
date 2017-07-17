@@ -5,3 +5,5 @@
 - 歌词同步部分待优化，前端计算量过大
 - 进度条可调节，音量可调节
 - 因api协议问题，暂时只可clone到本地预览
+## DEMO PREVIEW ONLINE
+- [简易音乐播放器](https://simplecoco.github.io/demo/player/index.html)

@@ -15,10 +15,6 @@ function App() {
 	  	<ButtonAppBar />
 	  	<HeadPic />
 	  	<FullWidthGrid />
-	  	<FullWidthGrid />
-	  	<FullWidthGrid />
-	  	<FullWidthGrid />
-
   	</div>
 
   );

@@ -10,7 +10,9 @@ import Grid from 'material-ui/Grid';
 
 const styleSheet = createStyleSheet({
 	card: {
-		  minWidth: 230
+      minWidth: 230,
+      maxWidth: 350,
+      margin: "0 auto",
 	},
 	img: {
 	  	width: "100%",

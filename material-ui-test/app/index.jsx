@@ -9,15 +9,16 @@ import resetCss from '../styles/reset.css';
 
 
 function App() {
+	let address= "https://api.github.com/search/users?q=coco";
 	
-  return (
-  	<div>
+	return (
+		<div>
 	  	<ButtonAppBar />
 	  	<HeadPic />
-	  	<FullWidthGrid />
-  	</div>
+	  	<FullWidthGrid url={address}/>
+		</div>
 
-  );
+	);
 }
 
 const app=document.createElement("div");

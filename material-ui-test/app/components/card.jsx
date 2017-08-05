@@ -17,30 +17,28 @@ const styleSheet = createStyleSheet({
 	}
 });
 
-
 function SimpleMediaCard(props) {
   const classes = props.classes;
   return (
     <div>
       <Card className={classes.card}>
         <CardMedia className={classes.cardMedia}>
-          <img src={reptileImage} alt="Contemplative Reptile" className={classes.img} />
+          <img src={props.pic} alt="Contemplative Reptile" className={classes.img} />
         </CardMedia>
         <CardContent>
           <Typography type="headline" component="h2">
-            Lizard
+              {props.title}
           </Typography>
           <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+              {props.content}
           </Typography>
         </CardContent>
         <CardActions>
           <Button dense color="primary">
-            Share
+            Enter It
           </Button>
           <Button dense color="primary">
-            Learn More
+            Konw More
           </Button>
         </CardActions>
       </Card>

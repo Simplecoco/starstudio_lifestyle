@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import {render} from 'react-dom';
 import FullWidthGrid from './components/FullWidthGrid.jsx';
 import ButtonAppBar from './components/appBar';
 import HeadPic from './components/HeadPic';
@@ -23,4 +22,4 @@ function App() {
 
 const app=document.createElement("div");
 document.body.appendChild(app);
-ReactDOM.render(<App />, app);
+render(<App />, app);

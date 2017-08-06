@@ -13,7 +13,9 @@ module.exports={
 		app: path.resolve(APP_PATH, 'index.jsx'),
 		vendor: [
 			"react",
-			"react-dom"
+			"react-dom",
+			"material-ui",
+			"material-ui-icons"
 		]
 	},
 	output: {
@@ -29,13 +31,6 @@ module.exports={
 
 	module: {
 			loaders:[
-			// {
-			// 	test: /\.jsx?$/,
-			// 	loader: 'eslint-loader',
-			// 	include: APP_PATH,
-			// 	exclude: path.resolve(ROOT_PATH,"node_modules"),
-			// 	enforce: "pre"
-			// },
 			{
 				test: /\.css$/,
 				loader: ["style-loader", "css-loader"],
@@ -63,7 +58,12 @@ module.exports={
 			template: "./templates/index.html",
 			inject: true
 		}),
-		new ExtractTextPlugin("./styles/style.css")
+		new ExtractTextPlugin("./styles/style.css"),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings:false
+			}
+		})
 	],
 	resolve: {
 		extensions: [' ','.js','.jsx']

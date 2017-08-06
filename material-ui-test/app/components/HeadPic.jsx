@@ -1,5 +1,4 @@
 import React from 'react';
-import {render} from 'react-dom';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import bgPic from '../image/UNADJUSTEDNONRAW_thumb_7.jpg';
 import PropTypes from 'prop-types';

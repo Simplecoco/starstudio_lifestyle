@@ -13,9 +13,7 @@ module.exports={
 		app: path.resolve(APP_PATH, 'index.jsx'),
 		vendor: [
 			"react",
-			"react-dom",
-			"material-ui",
-			"material-ui-icons"
+			"react-dom"
 		]
 	},
 	output: {
@@ -24,7 +22,7 @@ module.exports={
 	},
 	devtool: 'eval-source-map',
 	devServer: {
-		historyApiFallback:true,
+		historyApiFallback: true,
 		hot: true,
 		inline: true
 	},
@@ -52,17 +50,26 @@ module.exports={
 		]
 	},
 	plugins:[
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+			}
+		}),
 		new webpack.optimize.CommonsChunkPlugin({name:"vendor",filename:"vendor.bundle.js"}),
 		new HtmlwebpackPlugin({
 			title: "material-ui-test",
 			template: "./templates/index.html",
 			inject: true
 		}),
-		new ExtractTextPlugin("./styles/style.css"),
+		new ExtractTextPlugin("style.css"),
 		new webpack.optimize.UglifyJsPlugin({
+			output: {
+				comments: false
+			},
 			compress: {
-				warnings:false
-			}
+				warnings: false
+			},
+			minimize: true
 		})
 	],
 	resolve: {

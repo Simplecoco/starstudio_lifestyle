@@ -19,7 +19,7 @@ const styleSheet = createStyleSheet({
     top: 20,
     left: "2.5%",
     zIndex: 100,
-    minWidth: 300
+    minWidth: 320
   },
 
   Appbar: {

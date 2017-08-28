@@ -18,10 +18,12 @@ module.exports={
 	},
 	output: {
 		path: BUILD_PATH,
-		filename: "bundle.js"
+		filename: "bundle.js",
+		publicPath: "/"
 	},
 	devtool: 'eval-source-map',
 	devServer: {
+		port: 8080,
 		historyApiFallback: true,
 		hot: true,
 		inline: true
@@ -31,7 +33,10 @@ module.exports={
 			loaders:[
 			{
 				test: /\.css$/,
-				loader: ["style-loader", "css-loader"],
+				use: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use:"css-loader"
+				}),
 				include:path.resolve(ROOT_PATH,"styles")
 			},
 			
@@ -44,7 +49,7 @@ module.exports={
 			
 			{
 				test: /\.(png|jpg)$/,
-				loader: 'file-loader?name=image/[name][hash:8].[ext]',
+				loader: 'url-loader?limit=8192&name=assets/[name][hash:8].[ext]',
 				exclude: path.resolve(ROOT_PATH,"node_modules")
 			}
 		]
@@ -61,7 +66,7 @@ module.exports={
 			template: "./templates/index.html",
 			inject: true
 		}),
-		new ExtractTextPlugin("style.css"),
+		new ExtractTextPlugin("css/[name]-[hash:8].css"),
 		new webpack.optimize.UglifyJsPlugin({
 			output: {
 				comments: false

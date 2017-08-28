@@ -4,13 +4,14 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-import reptileImage from '../image/abd50bc0e11052fea9669f18f0c017bc.jpg';
+import reptileImage from '../image/lizard.jpg';
 import Grid from 'material-ui/Grid';
-
 
 const styleSheet = createStyleSheet({
 	card: {
-		  minWidth: 230
+		  minWidth: 230,
+      maxWidth: 350,
+      margin: "0 auto",
 	},
 	img: {
 	  	width: "100%",

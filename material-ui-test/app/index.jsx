@@ -8,7 +8,7 @@ import resetCss from '../styles/reset.css';
 
 
 function App() {
-	let address= "https://api.github.com/search/users?q=coco";
+	let address= "https://api.github.com/search/users?q=mike";
 	
 	return (
 		<div>

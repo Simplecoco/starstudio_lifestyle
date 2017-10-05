@@ -5,3 +5,6 @@
 
 #依赖
 node_modules/
+
+#build
+build/

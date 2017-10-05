@@ -19,7 +19,6 @@ module.exports={
 	output: {
 		path: BUILD_PATH,
 		filename: "bundle.js",
-		publicPath: "/"
 	},
 	devtool: 'eval-source-map',
 	devServer: {
@@ -66,7 +65,16 @@ module.exports={
 			template: "./templates/index.html",
 			inject: true
 		}),
-		new ExtractTextPlugin("css/[name]-[hash:8].css")
+		new ExtractTextPlugin("css/[name]-[hash:8].css"),
+		new webpack.optimize.UglifyJsPlugin({
+			output: {
+				comments: false
+			},
+			compress: {
+				warnings: false
+			},
+			minimize: true
+		})
 	],
 	resolve: {
 		extensions: [' ','.js','.jsx']

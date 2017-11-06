@@ -53,7 +53,7 @@ Carousel.prototype = {
   _initPic:function (num) {
     var li = document.createElement('li');
     li.className = 'pic';
-    li.innerHTML = '<img src="img/' + num + '.png" >';
+    li.innerHTML = '<img src="img/' + num + '.jpg" >';
     li.style.width = this.width + 'px';
     return li;
   },
